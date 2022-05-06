@@ -17,24 +17,24 @@ p2y = int(0)
 p2z = int(1045)
 p2 = Matrix([p2x, p2y, p2z])
 
-p3x = int(500)
+p3x = int(1800)
 p3y = int(0)
-p3z = int(2345)
+p3z = int(1045)
 p3 = Matrix([p3x, p3y, p3z])
 
-p4x = int(1211)
+p4x = int(2510)
 p4y = int(0)
-p4z = int(2290)
+p4z = int(1045)
 p4 = Matrix([p4x, p4y, p4z])
 
-p5x = int(1525.84)
+p5x = int(2510)
 p5y = int(0)
-p5z = int(2308.79)
+p5z = int(20)
 p5 = Matrix([p5x, p5y, p5z])
 
-p6x = int(1815.79)
+p6x = int(2510)
 p6y = int(0)
-p6z = int(2314.11)
+p6z = int(-270)
 p6 = Matrix([p6x, p6y, p6z])
 
 soa = numpy.array([p1, p2, p3, p4, p5], dtype=object)
@@ -74,10 +74,10 @@ ax.plot3D(p6x, p6y, p6z, 'red', marker="^")
 ax.scatter(p6x, p6y, p6z, color='red', marker="^", label="End effector position")
 x, y, z = [p5x, p6x], [p5y, p6y], [p5z, p6z]
 ax.plot(x, y, z, color='darkorange')
-plt.title("Forward Kinematics for Initial Configuration of KUKA KR 360")
+plt.title("Forward Kinematics for Home Position of KUKA KR 360 ")
 plt.legend(bbox_to_anchor=(1.05, 1), loc="upper right")
-plt.savefig('figure_1.png')
-ax.view_init(elev=10, azim=90)
+plt.savefig('figure_3.png')
+
 
 
 matplotlib.pyplot.draw()
