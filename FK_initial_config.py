@@ -6,6 +6,7 @@ from sympy import Matrix
 
 #plt.style.use(['science', 'nature', 'vibrant', 'no-latex'])
 plt.rcParams["font.family"] = 'Times New Roman'
+plt.rcParams["figure.autolayout"] = True
 
 p1x = int(0)
 p1y = int(0)
@@ -70,6 +71,11 @@ ax.set_zlim([-1500, 2500])
 
 ax.plot3D(X, Y, Z, 'darkorange', marker="o")
 ax.plot3D(p6x, p6y, p6z, 'red', marker="^")
+x, y, z = [p5x, p6x], [p5y, p6y], [p5z, p6z]
+ax.plot(x, y, z, color='darkorange')
+plt.title("Forward Kinematics for Initial Configuration of KUKA KR 360")
+
+
 
 
 matplotlib.pyplot.draw()
